@@ -1,0 +1,46 @@
+{
+  "name": "fastify-svelte-ssr-hydration-esbuild-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev-svelte": "node npm-scripts/dev.svelte.js",
+    "dev-css": "node npm-scripts/dev.css.js",
+    "dev": "concurrently 'npm:dev-svelte' 'npm:dev-css' 'sleep 1 && nodemon' --raw",
+    "build": "node npm-scripts/build.js && webpack --config npm-scripts/webpack.config.js",
+    "start": "npm run build && NODE_ENV=production node src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierBover/fastify-svelte-ssr-hydration-esbuild-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierBover/fastify-svelte-ssr-hydration-esbuild-template/issues"
+  },
+  "homepage": "https://github.com/PierBover/fastify-svelte-ssr-hydration-esbuild-template#readme",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "esbuild": "^0.14.12",
+    "esbuild-node-externals": "^1.4.1",
+    "esbuild-plugin-glob": "^1.0.4",
+    "esbuild-svelte": "^0.6.2",
+    "fastify": "^3.27.0",
+    "fastify-autoload": "^3.10.0",
+    "fastify-static": "^4.5.0",
+    "glob": "^7.2.0",
+    "node-sass-glob-importer": "^5.3.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.49.0",
+    "svelte-loader": "^3.1.2",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

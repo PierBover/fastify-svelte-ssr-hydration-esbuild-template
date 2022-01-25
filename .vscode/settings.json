@@ -1,0 +1,6 @@
+{
+	"files.exclude": {
+		".client-hydration-scripts/*.js": true,
+		".route-wrappers-components/*.svelte": true
+	}
+}

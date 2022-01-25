@@ -1,0 +1,9 @@
+{
+	"verbose": false,
+	"watch": ["src"],
+	"ignore": ["src/static", "src/components", "src/scss"],
+	"ext": "js",
+	"exec": "node ./src/main.js",
+	"legacyWatch": false,
+	"delay": 250
+}
